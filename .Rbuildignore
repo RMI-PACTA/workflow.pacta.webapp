@@ -1,1 +1,7 @@
+^.dockerignore$
+^.github/
+^.lintr$
+^Dockerfile$
 ^LICENSE\.md$
+^docker-compose.yml$
+^workflow.pacta.Rproj$
