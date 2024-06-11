@@ -24,7 +24,7 @@ jobs:
       id-token: write
     steps:
 
-      - name: Checkout workflow.pacta
+      - name: Checkout workflow
         uses: actions/checkout@v4
 
       - name: Prepare environment
