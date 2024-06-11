@@ -115,6 +115,8 @@ jobs:
           chmod -R 777 "$REAL_ESTATE_DIR"
           mkdir -p "$SURVEY_DIR"
           chmod -R 777 "$SURVEY_DIR"
+          mkdir -p "$ANALYSIS_OUTPUT_DIR"
+          chmod -R 777 "$ANALYSIS_OUTPUT_DIR"
 
           docker run \
           --network none \
