@@ -72,7 +72,6 @@ jobs:
         with:
           # azcliversion: 2.30.0
           inlineScript: |
-            echo "pacta_data_dir: $PACTA_DATA_DATE_DIR"
             az storage copy \
               --source "$PACTA_DATA_URL/*" \
               --destination "pacta-data" \
