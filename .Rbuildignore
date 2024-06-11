@@ -4,4 +4,5 @@
 ^Dockerfile$
 ^LICENSE\.md$
 ^docker-compose.yml$
+^tests/
 ^workflow.pacta.Rproj$
