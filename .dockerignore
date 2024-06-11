@@ -1,0 +1,8 @@
+**/*.Rproj
+**/*.md
+**/.git
+**/.github
+**/.gitignore
+**/Dockerfile
+^tests/
+docker-compose.yml
