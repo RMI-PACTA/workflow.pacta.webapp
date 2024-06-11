@@ -1,7 +1,6 @@
 ^.dockerignore$
 ^.git/
 ^.github/
-^.github/
 ^.lintr$
 ^Dockerfile$
 ^LICENSE\.md$
@@ -13,7 +12,6 @@
 ^report_output_dir/
 ^summary_output_dir/
 ^survey_dir/
-^tests/
 ^tests/
 ^workflow.pacta.Rproj$
 analysis_output_dir/
