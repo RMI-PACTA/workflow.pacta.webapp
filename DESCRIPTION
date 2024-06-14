@@ -20,4 +20,4 @@ Imports:
     workflow.pacta.report
 Remotes:
     RMI-PACTA/workflow.pacta@feat/74-harmonize-parameters,
-    RMI-PACTA/workflow.pacta.report@feat/22-harmonize-parameters,
+    RMI-PACTA/workflow.pacta.report@819663e2f1dd53702ebfe0d3863ec5d53c198689
