@@ -6,27 +6,27 @@
   "parameters": {
     "portfolio": {
       "holdingsDate": "2023-12-31",
-      "portfolio_files": "default_portfolio.csv",
-      "portfolio_name": "Default Portfolio"
+      "portfolioFiles": "default_portfolio.csv",
+      "portfolioName": "Default Portfolio"
     },
     "analysis": {
-      "equity_market_list": [
+      "equityMarketList": [
         "GlobalMarket",
         "DevelopedMarket",
         "EmergingMarket"
       ],
-      "scenario_geographies_list": [
+      "scenarioGeographiesList": [
         "Global",
         "GlobalAggregate",
         "NonOECD",
         "OECD"
       ],
-      "scenario_sources_list": [
+      "scenarioSourcesList": [
         "GECO2023",
         "ISF2023",
         "WEO2023"
       ],
-      "sector_list": [
+      "sectorList": [
         "Power",
         "Automotive",
         "Coal",
@@ -34,20 +34,20 @@
         "Aviation",
         "Cement"
       ],
-      "start_year": 2023,
-      "time_horizon": 5
+      "startYear": 2023,
+      "timeHorizon": 5
     },
     "user": {
-      "investor_name": "Default Investor",
-      "language_select": "EN",
-      "peer_group": "bank",
-      "currency_exchange_value": 1,
-      "display_currency": "USD"
+      "investorName": "Default Investor",
+      "languageSelect": "EN",
+      "peerGroup": "bank",
+      "currencyExchangeValue": 1,
+      "displayCurrency": "USD"
     },
     "reporting": {
-      "project_code": "GENERAL",
-      "project_report_name": "general",
-      "green_techs": [
+      "projectCode": "GENERAL",
+      "projectReportName": "general",
+      "greenTechs": [
         "RenewablesCap",
         "HydroCap",
         "NuclearCap",
@@ -56,16 +56,16 @@
         "FuelCell",
         "Electric Arc Furnace"
       ],
-      "pacta_sectors_not_analysed": [
+      "pactaSectorsNotAnalysed": [
         "Steel",
         "Aviation",
         "Cement"
       ],
-      "portfolio_allocation_method": "portfolio_weight",
-      "scenario_geography": "Global",
-      "scenario_other": "GECO2022_1.5C",
-      "select_scenario": "WEO2022_NZE_2050",
-      "tech_roadmap_sectors": [
+      "portfolioAllocationMethod": "portfolio_weight",
+      "scenarioGeography": "Global",
+      "scenarioOther": "GECO2022_1.5C",
+      "selectScenario": "WEO2022_NZE_2050",
+      "techRoadmapSectors": [
         "Power",
         "Automotive",
         "Coal"
