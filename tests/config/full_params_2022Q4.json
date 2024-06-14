@@ -4,45 +4,72 @@
   "resultsURL": "https://pactadatadev.blob.core.windows.net/ghactions-workflow-pacta-results/73/merge/latest/default_2022Q4/output_dir",
   "benchmarksURL": "https://pactadatadev.file.core.windows.net/workflow-prepare-pacta-indices-outputs/2022Q4_20240529T002407Z",
   "parameters": {
-    "equity_market_list": ["GlobalMarket", "DevelopedMarket", "EmergingMarket"],
-    "scenario_geographies_list": ["Global", "GlobalAggregate", "NonOECD", "OECD"],
-    "sector_list": ["Power", "Automotive", "Oil&Gas", "Coal", "Steel", "Aviation", "Cement"],
-    "time_horizon": 5,
-    "start_year": 2022,
-    "holdingsDate": "2022-12-31",
-    "scenario_sources_list": ["GECO2022", "ISF2021", "WEO2022"],
-    "project_code": "GENERAL",
-    "portfolio_files": "default_portfolio.csv",
-    "select_scenario": "WEO2022_NZE_2050",
-    "scenario_other": "GECO2022_1.5C",
-    "project_report_name": "general",
-    "scenario_geography": "Global",
-    "portfolio_name": "Default Portfolio",
-    "investor_name": "Default Investor",
-    "peer_group": "bank",
-    "language_select": "EN",
-    "display_currency": "USD",
-    "currency_exchange_value": 1,
-    "portfolio_allocation_method": "portfolio_weight",
-    "tech_roadmap_sectors": [
-      "Power",
-      "Automotive",
-      "Oil&Gas",
-      "Coal"
-    ],
-    "pacta_sectors_not_analysed": [
-      "Steel",
-      "Aviation",
-      "Cement"
-    ],
-    "green_techs": [
-      "RenewablesCap",
-      "HydroCap",
-      "NuclearCap",
-      "Hybrid",
-      "Electric",
-      "FuelCell",
-      "Electric Arc Furnace"
-    ]
+    "portfolio": {
+      "holdingsDate": "2023-12-31",
+      "portfolioFiles": "default_portfolio.csv",
+      "portfolioName": "Default Portfolio"
+    },
+    "analysis": {
+      "equityMarketList": [
+        "GlobalMarket",
+        "DevelopedMarket",
+        "EmergingMarket"
+      ],
+      "scenarioGeographiesList": [
+        "Global",
+        "GlobalAggregate",
+        "NonOECD",
+        "OECD"
+      ],
+      "scenarioSourcesList": [
+        "GECO2022",
+        "ISF2021",
+        "WEO2022"
+      ],
+      "sectorList": [
+        "Power",
+        "Automotive",
+        "Coal",
+        "Steel",
+        "Aviation",
+        "Cement"
+      ],
+      "startYear": 2023,
+      "timeHorizon": 5
+    },
+    "user": {
+      "investorName": "Default Investor",
+      "languageSelect": "EN",
+      "peerGroup": "bank",
+      "currencyExchangeValue": 1,
+      "displayCurrency": "USD"
+    },
+    "reporting": {
+      "projectCode": "GENERAL",
+      "projectReportName": "general",
+      "greenTechs": [
+        "RenewablesCap",
+        "HydroCap",
+        "NuclearCap",
+        "Hybrid",
+        "Electric",
+        "FuelCell",
+        "Electric Arc Furnace"
+      ],
+      "pactaSectorsNotAnalysed": [
+        "Steel",
+        "Aviation",
+        "Cement"
+      ],
+      "portfolioAllocationMethod": "portfolio_weight",
+      "scenarioGeography": "Global",
+      "scenarioOther": "GECO2022_1.5C",
+      "selectScenario": "WEO2022_NZE_2050",
+      "techRoadmapSectors": [
+        "Power",
+        "Automotive",
+        "Coal"
+      ]
+    }
   }
 }
