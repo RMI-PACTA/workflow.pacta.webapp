@@ -1,11 +1,13 @@
 ---
 services:
   workflow.pacta.webapp:
-    build: .
+    # build: .
+    image: ghcr.io/rmi-pacta/workflow.pacta.webapp:pr-9
     # stdin_open: true
     # tty: true
     # entrypoint: ["R", "--args"]
     # command: '/workflow.pacta.webapp/tests/params/full_23q4.json'
+    command: '/workflow.pacta.webapp/test_params.json'
     environment:
       LOG_LEVEL: TRACE
       ANALYSIS_OUTPUT_DIR: "/mnt/analysis_output_dir"
@@ -18,6 +20,10 @@ services:
       OUTPUT_DIR: "/mnt/analysis_output_dir"
       PORTFOLIO_DIR: "/mnt/portfolios"
     volumes:
+      - type: bind
+        source: ./test_params.json
+        target: /workflow.pacta.webapp/test_params.json
+        read_only: true
       - type: bind
         source: ${data_dir:-./pacta-data/}
         target: /mnt/pacta-data
