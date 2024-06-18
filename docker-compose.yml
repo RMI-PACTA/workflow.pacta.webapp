@@ -1,24 +1,23 @@
 ---
 services:
   workflow.pacta.webapp:
-    # build: .
-    image: ghcr.io/rmi-pacta/workflow.pacta.webapp:pr-9
+    build: .
     # stdin_open: true
     # tty: true
     # entrypoint: ["R", "--args"]
-    # command: '/workflow.pacta.webapp/tests/params/full_23q4.json'
     command: '/workflow.pacta.webapp/test_params.json'
     environment:
       LOG_LEVEL: TRACE
       ANALYSIS_OUTPUT_DIR: "/mnt/analysis_output_dir"
       BENCHMARKS_DIR: "/mnt/benchmarks_dir"
-      REPORT_OUTPUT_DIR: "/mnt/report_output_dir"
-      SUMMARY_OUTPUT_DIR: "/mnt/summary_output_dir"
-      REAL_ESTATE_DIR: "/mnt/real_estate_dir"
-      SURVEY_DIR: "/mnt/survey_dir"
-      PACTA_DATA_DIR: "/mnt/pacta-data"
       OUTPUT_DIR: "/mnt/analysis_output_dir"
+      PACTA_DATA_DIR: "/mnt/pacta-data"
       PORTFOLIO_DIR: "/mnt/portfolios"
+      REAL_ESTATE_DIR: "/mnt/real_estate_dir"
+      REPORT_OUTPUT_DIR: "/mnt/report_output_dir"
+      SCORE_CARD_DIR: "/mnt/score_card_dir"
+      SUMMARY_OUTPUT_DIR: "/mnt/summary_output_dir"
+      SURVEY_DIR: "/mnt/survey_dir"
     volumes:
       - type: bind
         source: ./test_params.json
@@ -43,6 +42,10 @@ services:
       - type: bind
         source: ${real_estate_dir:-./real_estate_dir/}
         target: /mnt/real_estate_dir
+        read_only: true
+      - type: bind
+        source: ${score_card_dir:-./survey_dir}
+        target: /mnt/score_card_dir
         read_only: true
       - type: bind
         source: ${survey_dir:-./survey_dir/}
