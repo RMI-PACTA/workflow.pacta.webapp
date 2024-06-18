@@ -38,7 +38,7 @@
       "timeHorizon": 5
     },
     "user": {
-      "investorName": "Default Investor",
+      "name": "Default Investor",
       "languageSelect": "EN",
       "peerGroup": "bank",
       "currencyExchangeValue": 1,

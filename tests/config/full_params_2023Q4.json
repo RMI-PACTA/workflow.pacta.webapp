@@ -9,13 +9,6 @@
       "files": "default_portfolio.csv",
       "name": "Default Portfolio"
     },
-    "user": {
-      "name": "Default Investor",
-      "languageSelect": "EN",
-      "peerGroup": "bank",
-      "currencyExchangeValue": 1,
-      "displayCurrency": "USD"
-    },
     "analysis": {
       "equityMarketList": [
         "GlobalMarket",
@@ -45,7 +38,7 @@
       "timeHorizon": 5
     },
     "user": {
-      "investorName": "Default Investor",
+      "name": "Default Investor",
       "languageSelect": "EN",
       "peerGroup": "bank",
       "currencyExchangeValue": 1,
