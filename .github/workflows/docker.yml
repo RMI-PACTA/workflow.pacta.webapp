@@ -15,7 +15,7 @@ jobs:
     uses: RMI-PACTA/actions/.github/workflows/docker.yml@main
 
   test:
-    name: Test
+    # name: Test
     uses: ./.github/workflows/test.yml
     needs: [docker]
     secrets: inherit
