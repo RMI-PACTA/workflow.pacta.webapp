@@ -5,7 +5,8 @@ services:
     # stdin_open: true
     # tty: true
     # entrypoint: ["R", "--args"]
-    command: '/workflow.pacta.webapp/test_params.json'
+    command: '{\"portfolio\": {\"files\": \"default_portfolio.csv\", \"holdingsDate\": \"2023-12-31\", \"name\": \"FooPortfolio\"}, \"inherit\": \"GENERAL_2023Q4\"}'
+    # command: '/workflow.pacta.webapp/test_params.json'
     environment:
       LOG_LEVEL: TRACE
       ANALYSIS_OUTPUT_DIR: "/mnt/analysis_output_dir"
