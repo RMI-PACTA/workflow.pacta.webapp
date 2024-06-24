@@ -10,10 +10,6 @@ on:
 name: docker
 
 jobs:
-  foo:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "foo"
 
   docker:
     name: Docker actions
