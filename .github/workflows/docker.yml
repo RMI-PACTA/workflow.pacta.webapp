@@ -15,9 +15,9 @@ jobs:
     steps:
       - run: echo "foo"
 
-  # docker:
-  #   name: Docker actions
-  #   uses: RMI-PACTA/actions/.github/workflows/docker.yml@main
+  docker:
+    name: Docker actions
+    uses: RMI-PACTA/actions/.github/workflows/docker.yml@main
 
   # test:
   #   # name: Test
