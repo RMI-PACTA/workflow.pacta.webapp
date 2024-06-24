@@ -6,7 +6,6 @@ services:
     # tty: true
     # entrypoint: ["R", "--args"]
     command: '{\"portfolio\": {\"files\": \"default_portfolio.csv\", \"holdingsDate\": \"2023-12-31\", \"name\": \"FooPortfolio\"}, \"inherit\": \"GENERAL_2023Q4\"}'
-    # command: '/workflow.pacta.webapp/test_params.json'
     environment:
       LOG_LEVEL: TRACE
       ANALYSIS_OUTPUT_DIR: "/mnt/analysis_output_dir"
@@ -20,10 +19,6 @@ services:
       SUMMARY_OUTPUT_DIR: "/mnt/summary_output_dir"
       SURVEY_DIR: "/mnt/survey_dir"
     volumes:
-      - type: bind
-        source: ./test_params.json
-        target: /workflow.pacta.webapp/test_params.json
-        read_only: true
       - type: bind
         source: ${data_dir:-./pacta-data/}
         target: /mnt/pacta-data
