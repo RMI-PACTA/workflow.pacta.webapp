@@ -1,6 +1,6 @@
 Package: workflow.pacta.webapp
 Title: Prepare PACTA reports
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     c(person(given = "Alex",
              family = "Axthelm",
@@ -14,7 +14,7 @@ Description: Process portfolios using the entire PACTA process, including analys
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Imports: 
     workflow.pacta,
     workflow.pacta.report
