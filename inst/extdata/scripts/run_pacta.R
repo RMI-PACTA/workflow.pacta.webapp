@@ -27,7 +27,7 @@ pacta.workflow.utils::export_manifest(
   raw_params = raw_params
 )
 
-report_manifest_info <- workflow.pacta.report::run_pacta_reporting_process(
+report_manifest_info <- workflow.pacta.report:::run_pacta_reporting_process(
   params = params
 )
 
