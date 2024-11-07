@@ -20,4 +20,4 @@ Imports:
     workflow.pacta.report
 Remotes:
     RMI-PACTA/workflow.pacta,
-    RMI-PACTA/workflow.pacta.report@parse-params-in-script
+    RMI-PACTA/workflow.pacta.report
