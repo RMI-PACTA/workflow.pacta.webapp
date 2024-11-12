@@ -88,6 +88,12 @@ jobs:
           echo "real-estate-dir=$REAL_ESTATE_DIR"
           echo "real-estate-dir=$REAL_ESTATE_DIR" >> "$GITHUB_OUTPUT"
 
+          SCORE_CARD_DIR="$TEST_DIR/score_card_dir"
+          mkdir -p "$SCORE_CARD_DIR"
+          chmod -R 777 "$SCORE_CARD_DIR"
+          echo "score-card-dir=$SCORE_CARD_DIR"
+          echo "score-card-dir=$SCORE_CARD_DIR" >> "$GITHUB_OUTPUT"
+
           SURVEY_DIR="$TEST_DIR/survey_dir"
           mkdir -p "$SURVEY_DIR"
           chmod -R 777 "$SURVEY_DIR"
@@ -154,6 +160,7 @@ jobs:
           PORTFOLIO_DIR: tests/portfolios
           REAL_ESTATE_DIR: ${{ steps.prepare.outputs.real-estate-dir }}
           REPORT_OUTPUT_DIR: ${{ steps.prepare.outputs.report-output-dir }}
+          SCORE_CARD_DIR: ${{ steps.prepare.outputs.score-card-dir }}
           SUMMARY_OUTPUT_DIR: ${{ steps.prepare.outputs.summary-output-dir }}
           SURVEY_DIR: ${{ steps.prepare.outputs.survey-dir }}
         run: |
