@@ -105,7 +105,7 @@ jobs:
         env:
           TEST_DIR: ${{ steps.prepare.outputs.test-dir }}
         run: |
-          ls -laR "TEST_DIR"
+          ls -laR "$TEST_DIR"
 
       # https://github.com/Azure/login?tab=readme-ov-file#login-with-openid-connect-oidc-recommended
       - name: Azure Login
