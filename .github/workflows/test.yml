@@ -106,13 +106,6 @@ jobs:
           echo "analysis-output-dir=$ANALYSIS_OUTPUT_DIR"
           echo "analysis-output-dir=$ANALYSIS_OUTPUT_DIR" >> "$GITHUB_OUTPUT"
 
-      - name: Show TEST_DIR
-        id: ls-test-dir
-        env:
-          TEST_DIR: ${{ steps.prepare.outputs.test-dir }}
-        run: |
-          ls -laR "$TEST_DIR"
-
       # https://github.com/Azure/login?tab=readme-ov-file#login-with-openid-connect-oidc-recommended
       - name: Azure Login
         uses: azure/login@v2
@@ -148,6 +141,13 @@ jobs:
               --destination "benchmarks_dir/" \
               --recursive \
               --exclude-pattern "*.sqlite"
+
+      - name: Show TEST_DIR
+        id: ls-test-dir
+        env:
+          TEST_DIR: ${{ steps.prepare.outputs.test-dir }}
+        run: |
+          ls -laR "$TEST_DIR"
 
       - name: Run Docker Image
         env:
