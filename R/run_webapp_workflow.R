@@ -3,7 +3,7 @@ run_webapp_workflow <- function(
   raw_params,
   run_analysis = TRUE,
   run_reporting = TRUE
-  ) {
+) {
 
   analysis_manifest_path <- file.path(
     Sys.getenv("ANALYSIS_OUTPUT_DIR"),
