@@ -191,9 +191,12 @@ jobs:
           "$PARAMETERS"
 
       - name: List outputs
+        env:
+          REPORT_OUTPUT_DIR: ${{ steps.prepare.outputs.report-output-dir }}
+          SUMMARY_OUTPUT_DIR: ${{ steps.prepare.outputs.summary-output-dir }}
         run: |
-          ls -lR report_output_dir
-          ls -lR summary_output_dir
+          ls -lR $REPORT_OUTPUT_DIR
+          ls -lR $SUMMARY_OUTPUT_DIR
 
       - name: Upload results to Blob store
         id: upload-results
