@@ -21,3 +21,6 @@ Imports:
 Remotes:
     RMI-PACTA/workflow.pacta@update-param-filenames,
     RMI-PACTA/workflow.pacta.report@update-param-filenames
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

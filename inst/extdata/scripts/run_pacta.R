@@ -1,50 +1,8 @@
 logger::log_threshold(Sys.getenv("LOG_LEVEL", "INFO"))
 
-# Copy Schema files
-invisible(
-  file.copy(
-    from = system.file(
-      "extdata", "schema", "portfolio.json",
-      package = "workflow.pacta"
-      ),
-    to = file.path(
-      system.file(
-        "extdata", "schema",
-        package = "workflow.pacta.webapp"
-        ),
-      "portfolio.json"
-    )
-  )
-)
-invisible(
-  file.copy(
-    from = system.file(
-      "extdata", "schema", "portfolioParameters.json",
-      package = "workflow.pacta"
-      ),
-    to = file.path(
-      system.file(
-        "extdata", "schema",
-        package = "workflow.pacta.webapp"
-        ),
-      "portfolioParameters.json"
-    )
-  )
-)
-invisible(
-  file.copy(
-    from = system.file(
-      "extdata", "schema", "reportingParameters.json",
-      package = "workflow.pacta.report"
-      ),
-    to = file.path(
-      system.file(
-        "extdata", "schema",
-        package = "workflow.pacta.webapp"
-        ),
-      "reportingParameters.json"
-    )
-  )
+schema_tempdir <- tempdir()
+workflow.pacta.webapp::prepare_schema_files(
+  directory = schema_tempdir
 )
 
 raw_params <- commandArgs(trailingOnly = TRUE)
