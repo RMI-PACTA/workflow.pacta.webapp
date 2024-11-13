@@ -111,7 +111,7 @@ The simplest form (and minimal example that passes validation) for the JSON obje
 Let's break that down.
 
 `"inherit": "GENERAL_2023Q4"` is doing a lot of the heavy lifting here.
-`workflow.pacta.webapp` makes use of an option inheritance engine (provided by [`pacta.workflow.utils::parse_json_params()`](https://github.com/RMI-PACTA/pacta.workflow.utils/blob/main/R/parse_json_params.R)) that allows for pre-defined configurations of reasonable defaults for most users.
+`workflow.pacta.webapp` makes use of an option inheritance engine (provided by [`pacta.workflow.utils::parse_raw_params()`](https://github.com/RMI-PACTA/pacta.workflow.utils/blob/main/R/parse_raw_params.R)) that allows for pre-defined configurations of reasonable defaults for most users.
 Currently, The application will work properly with `GENERAL_2023Q4` or `GENERAL_2022Q4`.
 
 The `portfolio` object has three required keys:
