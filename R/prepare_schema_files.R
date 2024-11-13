@@ -10,12 +10,12 @@
 #' @export
 prepare_schema_files <- function(directory) {
   webapp_schema_files <- list.files(
-      system.file(
-        "extdata", "schema",
-        package = "workflow.pacta.webapp"
-      ),
-      full.names = TRUE
-    )
+    system.file(
+      "extdata", "schema",
+      package = "workflow.pacta.webapp"
+    ),
+    full.names = TRUE
+  )
   webapp_schema_copied <- file.copy(
     from = webapp_schema_files,
     to = file.path(
