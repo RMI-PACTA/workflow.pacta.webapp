@@ -9,7 +9,22 @@
 #'
 #' @export
 prepare_schema_files <- function(directory) {
-  portfolio_copied <- file.copy(
+  webapp_schema_files <- list.files(
+      system.file(
+        "extdata", "schema",
+        package = "workflow.pacta.webapp"
+      ),
+      full.names = TRUE
+    )
+  webapp_schema_copied <- file.copy(
+    from = webapp_schema_files,
+    to = file.path(
+      directory,
+      basename(webapp_schema_files)
+    )
+  )
+
+  portfolio_schema_copied <- file.copy(
     from = system.file(
       "extdata", "schema", "portfolio.json",
       package = "workflow.pacta"
@@ -40,7 +55,8 @@ prepare_schema_files <- function(directory) {
     )
   )
   stopifnot(
-    portfolio_copied,
+    webapp_schema_copied,
+    portfolio_schema_copied,
     portfolio_schema_copied,
     reporting_schema_copied
   )
