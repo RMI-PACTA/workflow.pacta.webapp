@@ -23,7 +23,7 @@ params <- pacta.workflow.utils::parse_raw_params(
     )
   ),
   schema_file = file.path(schema_tempdir, "PACTAParameters.json"),
-  raw_schema_file = system.file(schema_tempdir, "rawParameters.json")
+  raw_schema_file = file.path(schema_tempdir, "rawParameters.json")
 )
 
 workflow.pacta.webapp::run_webapp_workflow(
