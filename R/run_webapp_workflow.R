@@ -1,3 +1,14 @@
+#' Run Webapp workflow
+#'
+#' Reun steps required to prepare a PACTA analysis and report.
+#'
+#' @param params (`list`) A list of parameters to be used in the analysis and
+#' reporting process. See JSON Schema for details.
+#' @param raw_params (`character`) Raw JSON string of parameters.
+#' @param run_analysis (`logical`) Run the analysis process.
+#' @param run_reporting (`logical`) Run the reporting process.
+#' @return returndes
+#' @export
 run_webapp_workflow <- function(
   params,
   raw_params,
