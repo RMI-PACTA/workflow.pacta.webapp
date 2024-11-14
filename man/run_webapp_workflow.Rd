@@ -8,7 +8,16 @@ run_webapp_workflow(
   params,
   raw_params,
   run_analysis = TRUE,
-  run_reporting = TRUE
+  run_reporting = TRUE,
+  analysis_output_dir = Sys.getenv("ANALYSIS_OUTPUT_DIR"),
+  benchmarks_dir = Sys.getenv("BENCHMARKS_DIR"),
+  pacta_data_dir = Sys.getenv("PACTA_DATA_DIR"),
+  portfolio_dir = Sys.getenv("PORTFOLIO_DIR"),
+  real_estate_dir = Sys.getenv("REAL_ESTATE_DIR"),
+  report_output_dir = Sys.getenv("REPORT_OUTPUT_DIR"),
+  score_card_dir = Sys.getenv("SCORE_CARD_DIR"),
+  summary_output_dir = Sys.getenv("SUMMARY_OUTPUT_DIR"),
+  survey_dir = Sys.getenv("SURVEY_DIR")
 )
 }
 \arguments{
@@ -20,9 +29,30 @@ reporting process. See JSON Schema for details.}
 \item{run_analysis}{(\code{logical}) Run the analysis process.}
 
 \item{run_reporting}{(\code{logical}) Run the reporting process.}
+
+\item{analysis_output_dir}{Directory containing the PACTA analysis results.}
+
+\item{benchmarks_dir}{Directory containing the benchmark analysis results.}
+
+\item{pacta_data_dir}{filepath: Directory with "pacta-data"}
+
+\item{portfolio_dir}{filepath: Directory with portfolio files}
+
+\item{real_estate_dir}{Directory containing real estate data.}
+
+\item{report_output_dir}{Directory where the interactive report will be}
+
+\item{score_card_dir}{Directory containing score card data.}
+
+\item{summary_output_dir}{Directory where the executive summary will be}
+
+\item{survey_dir}{Directory containing survey data.
+saved.
+saved.}
 }
 \value{
-returndes
+(invisible) \code{TRUE} if the workflow was successful. Primarily called
+for side effect of rendering files.
 }
 \description{
 Reun steps required to prepare a PACTA analysis and report.

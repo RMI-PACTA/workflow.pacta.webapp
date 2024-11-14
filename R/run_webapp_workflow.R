@@ -7,7 +7,19 @@
 #' @param raw_params (`character`) Raw JSON string of parameters.
 #' @param run_analysis (`logical`) Run the analysis process.
 #' @param run_reporting (`logical`) Run the reporting process.
-#' @return returndes
+#' @param analysis_output_dir Directory containing the PACTA analysis results.
+#' @param benchmarks_dir Directory containing the benchmark analysis results.
+#' @param pacta_data_dir filepath: Directory with "pacta-data"
+#' @param portfolio_dir filepath: Directory with portfolio files
+#' @param real_estate_dir Directory containing real estate data.
+#' @param report_output_dir Directory where the interactive report will be
+#' @param score_card_dir Directory containing score card data.
+#' @param summary_output_dir Directory where the executive summary will be
+#' @param survey_dir Directory containing survey data.
+#' saved.
+#' saved.
+#' @return (invisible) `TRUE` if the workflow was successful. Primarily called
+#' for side effect of rendering files.
 #' @export
 run_webapp_workflow <- function(
   params,
@@ -26,11 +38,11 @@ run_webapp_workflow <- function(
 ) {
 
   analysis_manifest_path <- file.path(
-    Sys.getenv("ANALYSIS_OUTPUT_DIR"),
+    analysis_output_dir,
     "manifest.json"
   )
   reporting_manifest_path <- file.path(
-    Sys.getenv("REPORT_OUTPUT_DIR"),
+    report_output_dir,
     "manifest.json"
   )
 
@@ -75,5 +87,5 @@ run_webapp_workflow <- function(
     )
 
   }
-
+  return(invisible(TRUE))
 }
