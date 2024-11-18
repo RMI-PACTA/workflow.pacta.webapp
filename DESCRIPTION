@@ -1,6 +1,6 @@
 Package: workflow.pacta.webapp
 Title: Prepare PACTA reports
-Version: 0.0.1.9001
+Version: 0.0.1.9002
 Authors@R: 
     c(person(given = "Alex",
              family = "Axthelm",
@@ -16,8 +16,12 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
+    pacta.workflow.utils,
     workflow.pacta,
     workflow.pacta.report
 Remotes:
     RMI-PACTA/workflow.pacta,
     RMI-PACTA/workflow.pacta.report
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

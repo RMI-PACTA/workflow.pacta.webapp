@@ -6,13 +6,17 @@
   "$comment": "Created by Alex Axthelm, aaxthelm@rmi.org",
   "type": "object",
   "properties": {
-    "portfolio_files": {
+    "portfolio": {
+      "$ref": "portfolio.json"
+    }
+,
+    "inherit": {
       "type": "string",
-      "description": "List of portfolio files to be analyzed."
+      "description": "Path to a file with inheritance information."
     }
   },
   "required": [
-    "portfolio_files"
+    "portfolio"
   ],
   "additionalProperties": true
 }
