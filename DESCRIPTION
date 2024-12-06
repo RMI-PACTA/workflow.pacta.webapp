@@ -1,6 +1,6 @@
 Package: workflow.pacta.webapp
 Title: Prepare PACTA reports
-Version: 0.0.1.9002
+Version: Call me the cache buster
 Authors@R: 
     c(person(given = "Alex",
              family = "Axthelm",
