@@ -20,6 +20,7 @@ Imports:
     workflow.pacta,
     workflow.pacta.report
 Remotes:
+    RMI-PACTA/pacta.workflow.utils,
     RMI-PACTA/workflow.pacta,
     RMI-PACTA/workflow.pacta.report
 Suggests: 
