@@ -1,6 +1,6 @@
 Package: workflow.pacta.webapp
 Title: Prepare PACTA reports
-Version: 0.0.1.9002
+Version: 0.0.1.9003
 Authors@R: 
     c(person(given = "Alex",
              family = "Axthelm",
@@ -20,6 +20,7 @@ Imports:
     workflow.pacta,
     workflow.pacta.report
 Remotes:
+    RMI-PACTA/pacta.workflow.utils,
     RMI-PACTA/workflow.pacta,
     RMI-PACTA/workflow.pacta.report
 Suggests: 
