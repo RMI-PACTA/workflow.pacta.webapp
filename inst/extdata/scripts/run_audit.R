@@ -31,6 +31,6 @@ workflow.pacta.webapp::run_webapp_workflow(
   params = params,
   raw_params = raw_params,
   run_audit = TRUE,
-  run_analysis = TRUE,
-  run_reporting = TRUE
+  run_analysis = FALSE,
+  run_reporting = FALSE
 )

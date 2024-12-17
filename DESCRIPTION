@@ -21,7 +21,7 @@ Imports:
     workflow.pacta.report
 Remotes:
     RMI-PACTA/pacta.workflow.utils,
-    RMI-PACTA/workflow.pacta,
+    RMI-PACTA/workflow.pacta@audit-only,
     RMI-PACTA/workflow.pacta.report
 Suggests: 
     testthat (>= 3.0.0)
