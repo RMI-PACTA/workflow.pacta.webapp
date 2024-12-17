@@ -7,6 +7,7 @@
 run_webapp_workflow(
   params,
   raw_params,
+  run_audit = TRUE,
   run_analysis = TRUE,
   run_reporting = TRUE,
   analysis_output_dir = Sys.getenv("ANALYSIS_OUTPUT_DIR"),
@@ -25,6 +26,8 @@ run_webapp_workflow(
 reporting process. See JSON Schema for details.}
 
 \item{raw_params}{(\code{character}) Raw JSON string of parameters.}
+
+\item{run_audit}{(\code{logical}) Run the audit process.}
 
 \item{run_analysis}{(\code{logical}) Run the analysis process.}
 

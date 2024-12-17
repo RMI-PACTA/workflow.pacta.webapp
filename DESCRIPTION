@@ -1,6 +1,6 @@
 Package: workflow.pacta.webapp
 Title: Prepare PACTA reports
-Version: 0.0.1.9003
+Version: 0.0.1.9004
 Authors@R: 
     c(person(given = "Alex",
              family = "Axthelm",
@@ -21,8 +21,8 @@ Imports:
     workflow.pacta.report
 Remotes:
     RMI-PACTA/pacta.workflow.utils,
-    RMI-PACTA/workflow.pacta,
-    RMI-PACTA/workflow.pacta.report
+    RMI-PACTA/workflow.pacta@audit-only,
+    RMI-PACTA/workflow.pacta.report@command-flow
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
