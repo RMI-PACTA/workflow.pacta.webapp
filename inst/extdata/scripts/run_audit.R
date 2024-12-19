@@ -26,6 +26,7 @@ params <- pacta.workflow.utils::parse_raw_params(
 workflow.pacta.webapp::run_webapp_workflow(
   params = params,
   raw_params = raw_params,
-  run_analysis = TRUE,
+  run_audit = TRUE,
+  run_analysis = FALSE,
   run_reporting = FALSE
 )
