@@ -16,6 +16,10 @@ params <- pacta.workflow.utils::parse_raw_params(
     system.file(
       "extdata", "parameters",
       package = "workflow.pacta"
+    ),
+    system.file(
+      "extdata", "parameters",
+      package = "workflow.pacta.report"
     )
   ),
   schema_file = file.path(schema_tempdir, "PACTAParameters.json"),
