@@ -6,3 +6,10 @@
 **/Dockerfile
 ^tests/
 docker-compose.yml
+analysis_output_dir/
+benchmarks_dir/
+real_estate_dir/
+report_output_dir/
+summary_output_dir/
+survey_dir/
+pacta-data/
