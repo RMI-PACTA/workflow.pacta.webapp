@@ -187,7 +187,7 @@ jobs:
           --mount type=bind,source=${ANALYSIS_OUTPUT_DIR},target=/mnt/analysis_output_dir \
           --mount type=bind,source=${REPORT_OUTPUT_DIR},target=/mnt/report_output_dir \
           --mount type=bind,source=${SUMMARY_OUTPUT_DIR},target=/mnt/summary_output_dir \
-          --entrypoint "Rscript --vanilla /workflow.pacta.webapp/inst/extdata/scripts/run_audit.R" \
+          --entrypoint "/workflow.pacta.webapp/inst/extdata/scripts/run_audit.sh" \
           $FULL_IMAGE_NAME \
           "$PARAMETERS"
 
