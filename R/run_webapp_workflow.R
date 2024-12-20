@@ -5,6 +5,7 @@
 #' @param params (`list`) A list of parameters to be used in the analysis and
 #' reporting process. See JSON Schema for details.
 #' @param raw_params (`character`) Raw JSON string of parameters.
+#' @param run_audit (`logical`) Run the audit process.
 #' @param run_analysis (`logical`) Run the analysis process.
 #' @param run_reporting (`logical`) Run the reporting process.
 #' @param analysis_output_dir Directory containing the PACTA analysis results.
@@ -24,6 +25,7 @@
 run_webapp_workflow <- function(
   params,
   raw_params,
+  run_audit = TRUE,
   run_analysis = TRUE,
   run_reporting = TRUE,
   analysis_output_dir = Sys.getenv("ANALYSIS_OUTPUT_DIR"),
@@ -46,10 +48,12 @@ run_webapp_workflow <- function(
     "manifest.json"
   )
 
-  if (run_analysis || !file.exists(analysis_manifest_path)) {
+  if (run_audit || run_analysis || !file.exists(analysis_manifest_path)) {
 
     analysis_manifest_info <- workflow.pacta::run_pacta(
       params = params,
+      run_audit = run_audit,
+      run_analysis = run_analysis,
       pacta_data_dir = pacta_data_dir,
       output_dir = analysis_output_dir,
       portfolio_dir = portfolio_dir
