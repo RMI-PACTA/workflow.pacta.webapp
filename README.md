@@ -1,5 +1,9 @@
 # workflow.pacta.webapp
 
+[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+
+**This project is archived for future reference, but no new work is expected in this repository.**
+
 R package and Corresponding Docker image for PACTA web application.
 
 although this application can be run locally, it is primarily intended to be run as a Docker image.
